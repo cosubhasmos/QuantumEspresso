@@ -1,0 +1,41 @@
+&control
+    calculation = 'relax'
+    prefix = 'CuNiPt'
+    pseudo_dir = '.'
+    outdir = "."
+    restart_mode = 'restart'
+/
+
+&system
+    ibrav = 1
+    celldm(1) = 37.7945
+    nat = 6
+    ntyp = 3
+    ecutwfc = 60
+    ecutrho = 240
+    nbnd = 100
+    occupations = 'smearing'
+    smearing = 'gaussian'
+    degauss = 0.01
+    assume_isolated = 'martyna-tuckerman'
+/
+
+&electrons
+    conv_thr = 1.0d-7,
+    mixing_beta = 0.7,
+    
+/
+&IONS
+/
+ATOMIC_SPECIES
+Cu 63.546 Cu.pbesol-spn-kjpaw_psl.upf
+Ni 58.6934 Ni.pbesol-spn-kjpaw_psl.upf
+Pt 195.084 Pt.pbesol-spn-kjpaw_psl.upf
+ATOMIC_POSITIONS {bohr}
+Cu   9.0  9.0  9.0
+Cu   9.0  9.0 11.0
+Ni  11.0  9.0  9.0
+Ni  11.0  9.0 11.0
+Pt  10.0 11.0  9.0
+Pt  10.0 11.0 11.0
+K_POINTS Gamma                            
