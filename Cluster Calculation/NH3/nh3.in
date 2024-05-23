@@ -1,0 +1,34 @@
+&control
+    calculation = 'relax'
+    prefix = 'NH3'
+    pseudo_dir = '.'
+    outdir = "."
+/
+
+&system
+    ibrav = 1
+    celldm(1) = 37.7945
+    nat = 4,
+    ntyp = 2,
+    ecutwfc = 40.D0
+    ecutrho = 160.D0
+    nbnd = 8
+    assume_isolated = 'martyna-tuckerman'
+/
+
+&electrons
+    conv_thr = 1.D-7,
+    mixing_beta = 0.7D0,
+    
+/
+&IONS
+/
+ATOMIC_SPECIES
+N 14.00 N.pbe-n-kjpaw_psl.1.0.0.upf
+H 1.00 H.pbe-kjpaw_psl.1.0.0.upf
+ATOMIC_POSITIONS {bohr}
+N  10.0 10.0 10.5
+H   9.0  9.0  8.5
+H   9.5  8.5  9.0
+H  10.5  9.5  9.0
+K_POINTS Gamma                            
