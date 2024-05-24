@@ -1,0 +1,36 @@
+&control
+    calculation = 'nscf',
+    prefix = 'silicon'
+    outdir = './.'
+    pseudo_dir = './.'
+    verbosity = 'high'
+ /
+ &system
+    ibrav =  2,
+    celldm(1) = 10.38,
+    nat =  2,
+    ntyp = 1,
+    ecutwfc = 50,
+    ecutrho = 400,
+    nbnd = 8,
+    occupations = 'smearing'
+    degauss = 0.005
+ /
+ &electrons
+    mixing_beta = 0.6
+ /
+ 
+ATOMIC_SPECIES
+ Si 28.086  Si.UPF
+ 
+ATOMIC_POSITIONS (alat)
+ Si 0.0 0.0 0.0
+ Si 0.25 0.25 0.25
+ 
+K_POINTS {crystal_b}
+5
+ 00000 0.500 0.000 20 !L
+ 00000 00000 00000 30 !G
+ -0.50 00000 -0.50 10 !X
+ -0.375 0.2500 -0.375 30 !U
+ 0.000  0.000   0.000 20 !G

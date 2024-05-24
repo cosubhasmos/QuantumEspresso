@@ -1,0 +1,36 @@
+&control
+    calculation = 'scf'
+    prefix = 'graphene'
+    outdir = './tmp'
+    pseudo_dir = './pseudo'
+    verbosity = 'high'
+/
+&system
+    ibrav = 4
+    celldm(1) = 18
+    celldm(3) = 2
+    nat = 8
+    ntyp = 1
+    ecutwfc = 50.0
+    ecutrho = 200.0
+    occupations = 'smearing'
+    smearing = 'mp'
+    degauss = 0.01
+/
+&electrons
+    mixing_beta = 0.7
+    conv_thr = 1.0d-8
+/
+ATOMIC_SPECIES
+    C  12.0107  C.UPF
+ATOMIC_POSITIONS (angstrom)
+    C  0.000000  0.000000  0.000000
+    C  1.230000  0.710000  0.000000
+    C  2.460000  0.000000  0.000000
+    C  3.690000  0.710000  0.000000
+    C  1.230000  2.130000  0.000000
+    C  2.460000  2.840000  0.000000
+    C  0.000000  2.130000  0.000000
+    C  3.690000  2.840000  0.000000
+K_POINTS (automatic)
+    6 6 1 0 0 0

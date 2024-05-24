@@ -1,0 +1,8 @@
+&PROJWFC
+    outdir = './.'
+    prefix = 'silicon'
+    filpdos = 'si-pdos.dat'
+    DeltaE = 0.01
+    emin = -9.0
+    emax = 16.0
+/

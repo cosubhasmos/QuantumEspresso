@@ -1,0 +1,9 @@
+&DOS
+   prefix='graphene',
+   outdir='./.',
+   fildos='graphene.dat',
+   emin=-9.0,
+   emax=16.0
+
+/
+

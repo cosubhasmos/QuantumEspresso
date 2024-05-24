@@ -1,0 +1,45 @@
+ &control
+    calculation = 'nscf'
+    restart_mode= 'from_scratch'
+    prefix='graphene'
+    tstress=.true.
+    tprnfor=.true.
+    forc_conv_thr=1.0d-3
+    etot_conv_thr=1.0d-4
+    verbosity='high'	
+    outdir='./'
+    pseudo_dir = './',
+ /
+ &SYSTEM
+ ibrav=4
+ celldm(1)=4.65
+ celldm(3)=4.0
+ nat=2
+ ntyp=1
+ !nspin=2
+ !starting_magnetization =0.5
+!starting_magnetization(3)=0.5
+ ecutwfc=35
+ ecutrho=350
+ occupations='smearing'
+ smearing='mv'
+ !nbnd = 8
+ degauss=0.022
+ /
+ 
+ &ELECTRONS
+ diagonalization='david'
+ mixing_mode='plain'
+ electron_maxstep = 100,
+ conv_thr = 1.0D-8,
+ mixing_beta=0.6
+ /
+ &ions
+ /
+ ATOMIC_SPECIES
+ C 12.011 C.pbe-n-kjpaw_psl.1.0.0.UPF
+ATOMIC_POSITIONS (alat)
+C 0.0 0.0 0.0
+C 0.0 0.577 0.0 
+K_POINTS {automatic}
+ 14 14 1 0 0 0
